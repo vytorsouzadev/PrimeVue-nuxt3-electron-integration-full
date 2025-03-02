@@ -1,0 +1,36 @@
+6. Usage Example:
+Here's how to use the theme system from any component:
+
+<template>
+  <div>
+    <h1>Theme Demo</h1>
+    <Button @click="changeTheme('dark')">Dark Theme</Button>
+    <Button @click="changeTheme('light')">Light Theme</Button>
+    <Button @click="changeTheme('roxo')">Roxo Theme</Button>
+  </div>
+</template>
+
+<script setup>
+import { useThemeStore } from '~/stores/theme';
+
+const themeStore = useThemeStore();
+
+function changeTheme(themeId) {
+  themeStore.setTheme(themeId);
+}
+
+// Create a custom theme
+function addCustomTheme() {
+  themeStore.addCustomTheme({
+    id: 'my-custom-theme',
+    name: 'My Custom Theme',
+    background: '#003366',
+    selectedBackground: '#ffcc00',
+    textColor: '#ffffff',
+    isDark: true
+  });
+  
+  // Apply the custom theme
+  themeStore.setTheme('my-custom-theme');
+}
+</script>

@@ -1,0 +1,9 @@
+qualquer coisa que voce for usar no projeto voce precisar 
+importar e usar la no plugins
+
+//file: ./plugins/primevue.ts
+//primeiro importa 
+import Paginator from 'primevue/paginator';
+
+ nuxtApp.vueApp.component('Paginator', Paginator)
+  // Register more components as needed

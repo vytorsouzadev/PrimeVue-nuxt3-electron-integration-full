@@ -1,0 +1,74 @@
+/* Choose ONE of the following imports: */
+@import 'scrollbar-minimal.css';
+/* OR */
+/* @import 'scrollbar-themed.css'; */
+/* OR */
+/* @import 'scrollbar-animated.css'; */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  /* Example: Customize scrollbar colors */
+  --scrollbar-thumb-color: rgba(59, 130, 246, 0.4); /* Blue color */
+  --scrollbar-thumb-hover-color: rgba(59, 130, 246, 0.6);
+  --scrollbar-width: 10px;
+}
+
+/* For themed version, apply a theme class to <html> or <body> */
+/* Example:
+html {
+  @apply theme-dark; 
+}
+*/
+
+/* For animated version, apply an animation class to <html> or <body> */
+/* Example:
+html {
+  @apply anim-bounce;
+}
+*/
+
+/* Your other existing CSS rules */
+
+
+/* Adicione isso após suas declarações @tailwind */
+
+/* Escala global para todos os componentes PrimeVue */
+.p-component {
+  font-size: 0.85rem !important;
+}
+
+/* Ajustes específicos para os componentes mais comuns */
+.p-button {
+  font-size: 0.85rem !important;
+  padding: 0.4rem 0.8rem !important;
+}
+
+.p-inputtext, 
+.p-dropdown, 
+.p-multiselect,
+.p-calendar,
+.p-datatable {
+  font-size: 0.85rem !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th,
+.p-datatable .p-datatable-tbody > tr > td {
+  padding: 0.4rem 0.75rem !important;
+}
+
+.p-dialog .p-dialog-header {
+  padding: 0.8rem !important;
+}
+
+.p-dialog .p-dialog-content {
+  padding: 0.8rem !important;
+}
+
+.p-toast .p-toast-message {
+  font-size: 0.85rem !important;
+}

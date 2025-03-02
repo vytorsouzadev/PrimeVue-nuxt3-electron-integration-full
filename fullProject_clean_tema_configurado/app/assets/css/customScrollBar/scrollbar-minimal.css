@@ -1,0 +1,50 @@
+/* Minimal Scrollbar Styling */
+:root {
+  --scrollbar-width: 8px;
+  --scrollbar-height: 8px;
+  --scrollbar-track-color: transparent;
+  --scrollbar-thumb-color: rgba(0, 0, 0, 0.2);
+  --scrollbar-thumb-hover-color: rgba(0, 0, 0, 0.3);
+  --scrollbar-border-radius: 10px;
+  --scrollbar-border: 2px solid transparent;
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-height);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color);
+  border-radius: var(--scrollbar-border-radius);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: var(--scrollbar-border-radius);
+  border: var(--scrollbar-border);
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-color);
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+/* Auto-hide scrollbar */
+.scroll-auto {
+  overflow: auto;
+}
+
+.scroll-auto::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.scroll-auto:hover::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+}
